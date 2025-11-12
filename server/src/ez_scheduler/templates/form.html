@@ -250,6 +250,25 @@
                     {% endfor %}
                 {% endif %}
 
+                <!-- WhatsApp Community Opt-in -->
+                <div class="bg-green-50 border border-green-200 rounded-md p-4">
+                    <div class="flex items-start">
+                        <input
+                            type="checkbox"
+                            id="whatsapp_optin"
+                            name="whatsapp_optin"
+                            value="true"
+                            class="w-4 h-4 text-green-600 bg-white border-gray-300 rounded focus:ring-green-500 focus:ring-2 mt-0.5"
+                        >
+                        <label for="whatsapp_optin" class="ml-3 text-sm text-gray-700">
+                            <span class="font-medium text-gray-900">Join WhatsApp Community</span>
+                            <span class="block text-gray-600 mt-1">
+                                Get event updates and coordinate with other attendees via WhatsApp (optional)
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
                 <!-- Error Message -->
                 <div x-show="error" class="bg-red-50 border border-red-200 rounded-md p-4">
                     <div class="flex">
@@ -259,6 +278,14 @@
                         <span class="text-red-800 text-sm" x-text="error"></span>
                     </div>
                 </div>
+
+                <!-- Terms & Privacy Notice -->
+                <p class="text-xs text-gray-500 text-center">
+                    By submitting this form, you agree to our
+                    <a href="/terms" target="_blank" class="text-blue-600 hover:underline">Terms & Conditions</a>
+                    and
+                    <a href="/privacy-policy" target="_blank" class="text-blue-600 hover:underline">Privacy Policy</a>.
+                </p>
 
                 <!-- Submit Buttons -->
                 <div>

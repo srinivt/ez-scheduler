@@ -16,3 +16,9 @@ templates = Jinja2Templates(directory=str(template_dir))
 async def privacy_policy(request: Request):
     """Serve the Privacy Policy page"""
     return templates.TemplateResponse(request, "privacy_policy.html", {})
+
+
+@router.get("/terms")
+async def terms_and_conditions(request: Request):
+    """Serve the Terms & Conditions page"""
+    return templates.TemplateResponse(request, "terms.html", {})
